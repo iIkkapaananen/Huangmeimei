@@ -110,7 +110,10 @@
             var music = document.getElementById("bgmusic");//获取ID
             // console.log(music);
             // console.log(music.paused);
-            music.play();
+            setTimeout(function () {
+                music.paused = false;
+                music.play(); //重新触发自动播放
+            }, 1000);
             if (music.paused) { //如果播放失败
                 music.paused = false;
                 music.play(); //重新触发自动播放
@@ -121,7 +124,8 @@
     </script>
 
     <div class="cs">
-        <img src="https://i.postimg.cc/cCzctRB2/1732870882249.png" id="logo"> <!--照片MD5加密-->
+        <img src="https://postimg.cc/wRJVyXRN" id="logo"> 
+        <!--照片MD5加密-->
     </div>
     <canvas class="canvas" width="1820" height="905"></canvas>
 
