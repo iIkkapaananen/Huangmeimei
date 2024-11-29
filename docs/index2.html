@@ -114,6 +114,14 @@
                 music.play(); //重新触发自动播放
             }
 
+            var music2 = document.getElementById("audio");//获取ID
+            // console.log(music);
+            // console.log(music.paused);
+            if (music2.paused) { //如果播放失败
+                music2.paused = false;
+                music2.play(); //重新触发自动播放
+            }
+
         }
         setInterval("toggleSound()", 1);
     </script>
